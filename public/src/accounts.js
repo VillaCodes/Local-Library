@@ -23,7 +23,7 @@ function getTotalNumberOfBorrows(account, books) {
  let mappedBorrows = totalBorrows.map((borrows) => borrows * 1)
  return mappedBorrows.reduce((acc, borrow) => acc + borrow, accumulator);
  }
-
+// following function retrievedBooks is a helper function
 function retrievedBooks (account, books) {
   let id = account.id
   let allBooksCheckedOut = [];
@@ -34,7 +34,7 @@ function retrievedBooks (account, books) {
   }
   return allBooksCheckedOut
 }
-
+// previous function retrievedBooks is a helper function used within this next function
 function getBooksPossessedByAccount(account, books, authors) {
   
   let possessedByAccount = retrievedBooks (account, books);
